@@ -2,15 +2,15 @@
 const loader = require('./sequelize-loader');
 const Sequelize = loader.Sequelize;
 
-const Habits = loader.database.define(
-  'habitses',
+const Habit = loader.database.define(
+  'habits',
   {
-    habitsId: {
+    habitId: {
       type: Sequelize.INTEGER,
       primaryKey: true,
       allowNull: false
     },
-    habitsName: {
+    habitName: {
       type: Sequelize.STRING,
       allowNull: false
     },
@@ -46,4 +46,4 @@ const Habits = loader.database.define(
   }
 );
 
-module.exports = Habits;
+module.exports = Habit;
