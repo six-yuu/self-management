@@ -28,7 +28,7 @@ const Task = loader.database.define(
     timestamps: false,
     indexes: [
       {
-        fields: ['endline']
+        fields: ['endline','created']
       }
     ]
   }

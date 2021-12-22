@@ -30,7 +30,7 @@ const Habits = loader.database.define(
       type: Sequelize.INTEGER,
       allowNull: false
     },
-    createBy: {
+    createdBy: {
       type: Sequelize.INTEGER,
       allowNull: false
     }
@@ -40,7 +40,7 @@ const Habits = loader.database.define(
     timestamps: false,
     indexes: [
       {
-        fields: ['habitsId']
+        fields: ['createdBy']
       }
     ]
   }

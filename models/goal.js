@@ -32,7 +32,7 @@ const Goal = loader.database.define(
     timestamps: false,
     indexes: [
       {
-        fields: ['goalId']
+        fields: ['createdBy']
       }
     ]
   }

@@ -22,7 +22,7 @@ const Diary = loader.database.define(
       type: Sequelize.DATE,
       allowNull: false
     },
-    createBy: {
+    createdBy: {
       type: Sequelize.INTEGER,
       allowNull: false
     }
@@ -32,7 +32,7 @@ const Diary = loader.database.define(
     timestamps: false,
     indexes: [
       {
-        fields: ['diaryDate']
+        fields: ['diaryDate','createdBy']
       }
     ]
   }
