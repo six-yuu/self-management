@@ -14,17 +14,17 @@ const Habit = loader.database.define(
       type: Sequelize.STRING,
       allowNull: false
     },
-    where: {
+    place: {
       type: Sequelize.STRING,
-      allowNull: ture
+      allowNull: false
     },
     whatTime: {
       type: Sequelize.STRING,
-      allowNull: ture
+      allowNull: false
     },
     howLong: {
       type: Sequelize.STRING,
-      allowNull: ture
+      allowNull: false
     },
     frequency: {
       type: Sequelize.INTEGER,

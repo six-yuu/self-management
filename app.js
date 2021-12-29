@@ -13,16 +13,16 @@ var Schedule = require('./models/schedule');
 var Diary = require('./models/diary');
 var Habit = require('./models/habit');
 var Task = require('./models/task');
+//テーブルの作成(sync)
 User.sync().then(() => {
   Schedule.belongsTo(User, {foreignKey: 'createdBy'});
   Schedule.sync();
-  Comment.belongsTo(User, {foreignKey: 'userId'});
-  Comment.sync();
-  Availability.belongsTo(User, {foreignKey: 'userId'});
-  Candidate.sync().then(() => {
-    Availability.belongsTo(Candidate, {foreignKey: 'candidateId'});
-    Availability.sync();
-  });
+  Diary.belongsTo(User, {foreignKey: 'userId'});
+  Diary.sync();
+  Habit.belongsTo(User, {foreignKey: 'userId'});
+  Habit.sync();
+  Task.belongsTo(User, {foreignKey: 'userId'});
+  Task.sync();
 });
 
 var GitHubStrategy = require('passport-github2').Strategy;
